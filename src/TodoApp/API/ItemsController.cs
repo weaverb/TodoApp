@@ -25,5 +25,11 @@ namespace TodoApp.API
         }
 
 
+        [HttpPost, Route("api/items/add")]
+        public IActionResult Post([FromBody]TodoItem item)
+        {
+            return new ObjectResult(item);
+        }
+
     }
 }
